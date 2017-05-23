@@ -21,7 +21,7 @@ function end() {
 function numberWizard(randomNumber) {
 
  
-  for (var i=1; i <= 5; i++) {
+  for (var i = 1; i <= 5; i++) {
      var input = prompt('Guess the number');
    
      input == randomNumber
@@ -30,7 +30,7 @@ function numberWizard(randomNumber) {
        ? alert('Number you seek is lower')
        : alert('Number you seek is higher') ;
        result.attempts += i;
-    }
+    };
 }
 numberWizard(randomNumber);
 
