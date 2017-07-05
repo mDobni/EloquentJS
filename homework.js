@@ -146,3 +146,32 @@ console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
 console.log(sum(range(1, 10)));
 // → 55
+
+
+// REVERSING AN ARRAY
+function reverseArray (array) {
+	var newArray = [];
+	for (var i = array.length - 1; i >= 0; i--) {
+    newArray.push(array[i]);
+    };
+  return newArray;
+};
+
+
+function reverseArrayInPlace (array) {
+	var placeHolder;
+  	
+  	for (var i = Math.floor((array.length - 1)); i > 0; i--) {
+      placeHolder = array[i];
+      array.push(i);
+      array.shift(i-1)
+    };
+  return array;
+};
+
+console.log(reverseArray(["A", "B", "C"]));
+// → ["C", "B", "A"];
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
