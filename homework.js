@@ -159,13 +159,10 @@ function reverseArray (array) {
 
 
 function reverseArrayInPlace (array) {
-	var placeHolder;
-  	
   	for (var i = Math.floor((array.length - 1)); i > 0; i--) {
-      placeHolder = array[i];
-      array.push(i);
-      array.shift(i-1)
-    };
+     	array.push(i);
+     	array.shift(i-1)
+  	};
   return array;
 };
 
